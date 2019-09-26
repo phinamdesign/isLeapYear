@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm năm nhuận</title>
+</head>
+<body>
+    <input type="text" value="" name="inYear" id="inYear"><br><br>
+    <button type="button" onclick="isLeapYear()">Kiểm tra</button>
+    <div id="leapYear"></div>
+    <script>
+
+        function isLeapYear(){
+            let inYear = document.getElementById("inYear").value;
+            if (inYear%4==0){
+                if (inYear%100==0){
+                    if (inYear%400==0){
+                        let leapYear = document.getElementById("leapYear").innerHTML = inYear + " là năm nhuận";
+                    }else {
+                        let leapYear = document.getElementById("leapYear").innerHTML = inYear + " không phải là năm nhuận";
+                    }
+                }else {
+                    let leapYear = document.getElementById("leapYear").innerHTML = inYear + " là năm nhuận";
+                }
+            }else {
+                let leapYear = document.getElementById("leapYear").innerHTML = inYear + " không phải là năm nhuận";
+            }
+        }
+    </script>
+</body>
+</html>
